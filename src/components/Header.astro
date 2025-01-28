@@ -1,16 +1,17 @@
 ---
+const { navColor = 'white', position } = Astro.props;
 ---
-<header class="absolute top-0 left-0 right-0 z-10">
+<header class={`${position ?? 'absolute'} top-0 left-0 right-0 z-20`}>
   <nav class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
-      <a href="/" class="text-2xl font-bold text-white">
+      <a href="/" class=`text-2xl font-bold text-${navColor}`>
         Still River Capital Advisors
       </a>
       <div class="flex space-x-4">
-        <a href="/about" class="text-white hover:text-gray-200">
+        <a href="/about" class=`text-${navColor} hover:text-gray-600`>
           About
         </a>
-        <a href="/contact" class="text-white hover:text-gray-200">
+        <a href="/contact" class=`text-${navColor} hover:text-gray-600`>
           Contact
         </a>
       </div>
